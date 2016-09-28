@@ -42,7 +42,7 @@ namespace TourManager.Controllers.Web
             {
                 _mailService.SendMail(_config["MailSettings:ToAddress"], model.Email, "From Tour Manager", model.Message);
 
-                ModelState.Clear();
+                ModelState.Clear(); //clear the form//
                 ViewBag.UserMessage = "Message Sent";
             }
 
